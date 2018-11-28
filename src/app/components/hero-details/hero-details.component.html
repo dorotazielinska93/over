@@ -1,0 +1,9 @@
+<p-progressSpinner *ngIf="load && heroInfo === null"></p-progressSpinner>
+<div class="back-to-list">
+  <button [routerLink]="['/heroes']">Cofnij</button>
+</div>
+<div *ngIf="!load && heroInfo !== null">
+  <div>
+    {{heroInfo.name}}
+  </div>
+</div>

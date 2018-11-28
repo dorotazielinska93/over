@@ -1,0 +1,21 @@
+.logo-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../assets/back.jpg");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: white;
+}
+
+img {
+  display: block;
+  margin: 40px auto 40px auto;
+  width: 50%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}

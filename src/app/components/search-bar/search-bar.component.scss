@@ -1,0 +1,64 @@
+.ui-g-12 ui-md-4 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+
+.ui-inputgroup {
+  width: 100% !important;
+}
+
+input {
+  width: 100%;
+}
+
+p-dialog {
+  background-color: white;
+  min-height: 0 !important;
+}
+
+.error-message {
+  border: none;
+}
+
+body .ui-dialog {
+  background-color: white;
+}
+
+.ui-dialog {
+  background-color: white;
+}
+
+body .ui-dialog .ui-dialog-content {
+  height: 100% !important;
+}
+
+.ui-dialog .ui-dialog-content {
+  height: 100% !important;
+}
+
+.dropdowns {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  width: 200px;
+}
+
+.search-options {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 50%;
+}
+
+@media screen and (min-width: 40.063em) {
+  .ui-md-4 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.ui-button {
+  background-color: #F99E1A !important;
+  border: 1px solid #F99E1A !important;
+}

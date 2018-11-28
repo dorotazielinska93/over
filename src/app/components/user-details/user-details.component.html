@@ -1,0 +1,5 @@
+<div *ngIf="!load && userInfo === null">No user were found, please use search bar to find User</div>
+<p-progressSpinner *ngIf="load && userInfo === null"></p-progressSpinner>
+<div *ngIf="!load && userInfo !== null">
+  {{userInfo.name}}
+</div>
