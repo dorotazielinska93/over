@@ -20,15 +20,15 @@ export class SearchBarComponent implements OnInit {
 
   constructor(private api: ApiService, private store: StoreService, private router: Router) {
     this.userName = '';
-    this.chosenRegion = 'US';
+    this.chosenRegion = 'eu';
     this.error = null;
     this.display = false;
     this.regions = [
-      {name: 'US', value: 'us'},
-      {name: 'Asia', value: 'asia'},
-      {name: 'Europe', value: 'eu'}
+      {name: 'us', value: 'us'},
+      {name: 'asia', value: 'asia'},
+      {name: 'eu', value: 'eu'}
     ];
-    this.chosenPlatform = 'PC';
+    this.chosenPlatform = 'pc';
     this.platforms = [
       {name: 'PC', value: 'pc'},
       {name: 'Xbox', value: 'xbox'},

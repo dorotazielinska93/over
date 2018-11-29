@@ -1,8 +1,5 @@
-<div *ngIf="heroes !== null">
-  <div *ngFor="let hero of heroes" class="hero-section">
-    <img src="../../../assets/ana.png" *ngIf="hero.id === 1">
-    <img src="../../../assets/bastion.png" *ngIf="hero.id === 2">
-    <div>Imię: {{hero.name}}</div>
-    <button (click)="downloadHeroDetails(hero.id)">Go to hero</button>
+<div *ngIf="heroes !== null" class="heroes">
+  <div *ngFor="let hero of heroes" class="{{getHeroClass(hero.id)}}" (click)="downloadHeroDetails(hero.id)" class="hero">
+    <!--<div class="hero-text">{{hero.name}}</div>-->
   </div>
 </div>

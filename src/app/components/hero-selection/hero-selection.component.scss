@@ -1,0 +1,31 @@
+.hero-selection {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  background-color: #43484C;
+  padding: 5px;
+  width: 300px;
+  margin-right: 50px;
+  position: absolute;
+  right: 0;
+  -ms-transform: skewX(-20deg); /* IE 9 */
+  -webkit-transform: skewX(-20deg); /* Safari */
+  transform: skewX(-20deg); /* Standard syntax */
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+
+.classes {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  -ms-transform: skewX(20deg); /* IE 9 */
+  -webkit-transform: skewX(20deg); /* Safari */
+  transform: skewX(20deg); /* Standard syntax */
+}
+
+.hero-class {
+  width: 30px;
+  margin: 0 10px;
+}

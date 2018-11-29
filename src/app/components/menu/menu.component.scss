@@ -1,27 +1,37 @@
 .menu-body {
   width: 100%;
-  height: 70px;
-  background-color: #405175;
+  margin: 10px 0 0 20px;
 }
 
 .menu-buttons {
   display: flex;
   flex-direction: row;
-  padding-top: 10px;
   width: 50%;
-  margin: 0 auto;
 }
 
 button {
-  height: 50px;
+  height: 35px;
   margin-right: 15px;
-  background-color: #405175 !important;
-  border: 1px solid #405175 !important;
   color: white !important;
   width: 200px;
   font-size: 16px;
+  transform: skewX(-20deg);
+  opacity: 0.8;
+  outline: #43484C;
 
   &:first-child {
     margin-left: 10px;
   }
+
+  span {
+    padding: 0 !important;
+  }
+}
+
+button:hover {
+  opacity: 1;
+}
+
+button:focus {
+  outline: #43484C;
 }

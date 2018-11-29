@@ -16,6 +16,7 @@ import { CoreModule } from "./core/core.module";
 import { ErrorDialogComponent } from './dialogs/error-dialog/error-dialog.component';
 import { DialogModule } from "primeng/dialog";
 import { HeroDetailsComponent } from './components/hero-details/hero-details.component';
+import { HeroSelectionComponent } from './components/hero-selection/hero-selection.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HeroDetailsComponent } from './components/hero-details/hero-details.com
     UserDetailsComponent,
     MenuComponent,
     ErrorDialogComponent,
-    HeroDetailsComponent
+    HeroDetailsComponent,
+    HeroSelectionComponent
   ],
   imports: [
     BrowserModule,

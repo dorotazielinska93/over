@@ -1,8 +1,11 @@
-<div class="logo-container">
-  <img src="assets/main_logo.png" alt="Logo">
-  <app-search-bar></app-search-bar>
+<div class="logo-container" [ngClass]="{'shorter' : !showClasses}">
+  <div class="main-head">
+    <img src="assets/main_logo.png" alt="Logo">
+    <app-search-bar></app-search-bar>
+  </div>
+  <div class="buttons">
+    <app-menu></app-menu>
+    <app-hero-selection *ngIf="showClasses"></app-hero-selection>
+  </div>
 </div>
-<div class="header">
-  <app-menu></app-menu>
-</div>
-<router-outlet></router-outlet>
+<router-outlet (activate)="checkRoute()"></router-outlet>

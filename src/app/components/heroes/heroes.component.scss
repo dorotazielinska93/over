@@ -4,7 +4,257 @@
   flex-direction: row;
   height: 60px;
 }
-//
-img {
-  width: 5%;
+
+.hero-selection {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  background-color: #c3c3c5;
+  padding: 5px;
+  width: 300px;
+  margin: 20px;
+  -ms-transform: skewX(-20deg); /* IE 9 */
+  -webkit-transform: skewX(-20deg); /* Safari */
+  transform: skewX(-20deg); /* Standard syntax */
+}
+
+.classes {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  -ms-transform: skewX(20deg); /* IE 9 */
+  -webkit-transform: skewX(20deg); /* Safari */
+  transform: skewX(20deg); /* Standard syntax */
+}
+
+.hero-class {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.hero-text {
+  font-size: 70px;
+  padding: 20px 100px;
+  z-index: -1;
+}
+
+.ana {
+  background-image: url("../../../assets/heroes/ana.png");
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid white;
+  background-color: #E19B41;
+}
+
+.ana:hover {
+  opacity: 0.5;
+}
+
+.bastion {
+  background-image: url("../../../assets/heroes/bast.png");
+  //height: 150px;
+  //background-position: center;
+  //background-color: #E19B41;
+  //background-repeat: no-repeat;
+  //margin-bottom: 10px;
+}
+
+.dva {
+  background-image: url("../../../assets/heroes/dva.png");
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #E19B41;
+  border-bottom: 1px solid white;
+}
+
+.orisa {
+  background-image: url("../../../assets/heroes/orisa.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.reinhardt {
+  background-image: url("../../../assets/heroes/reinhardt.jpg");
+  height: 150px;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.roadhog {
+  background-image: url("../../../assets/heroes/roadhog.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.winston {
+  background-image: url("../../../assets/heroes/winston.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.zaria {
+  background-image: url("../../../assets/heroes/zaria.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.genji {
+  background-image: url("../../../assets/heroes/Genji.png");
+  height: 150px;
+  background-position: center;
+  background-color: #E19B41;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+}
+
+.hanzo {
+  background-image: url("../../../assets/heroes/Hanzo.png");
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #E19B41;
+  border-bottom: 1px solid white;
+}
+
+.junkrat {
+  background-image: url("../../../assets/heroes/junkrat.png");
+  height: 150px;
+  background-position: center;
+  margin-bottom: 10px;
+  background-color: #E19B41;
+  background-repeat: no-repeat;
+}
+
+.lucio {
+  background-image: url("../../../assets/heroes/Lucio.png");
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #E19B41;
+  border-bottom: 1px solid white;
+}
+
+.mccree {
+  background-image: url("../../../assets/heroes/McCree.png");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.mei {
+  background-image: url("../../../assets/heroes/Mei.png");
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+  border-bottom: 1px solid white;
+}
+
+.mercy {
+  background-image: url("../../../assets/heroes/Mercy.png");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.phara {
+  background-image: url("../../../assets/heroes/phara.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.reaper {
+  background-image: url("../../../assets/heroes/reaper.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.soldier {
+  background-image: url("../../../assets/heroes/soldier.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.symmetra {
+  background-image: url("../../../assets/heroes/symmetra.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.torbjorn {
+  background-image: url("../../../assets/heroes/torbjorn.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.tracer {
+  background-image: url("../../../assets/heroes/tracer.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.widow {
+  background-image: url("../../../assets/heroes/widow.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.zenyatta {
+  background-image: url("../../../assets/heroes/zenyatta.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
+}
+
+.sombra {
+  background-image: url("../../../assets/heroes/sombra.jpg");
+  height: 150px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #E19B41;
 }

@@ -4,10 +4,10 @@
       <button pButton type="button" label="Search" (click)="searchUser()"></button>
       <input type="text" pInputText placeholder="Keyword" [(ngModel)]="userName">
     </div>
-    <div class="dropdowns">
-      <p-dropdown [options]="regions" [(ngModel)]="chosenRegion" optionLabel="name" [showClear]="false"></p-dropdown>
-      <p-dropdown [options]="platforms" [(ngModel)]="chosenPlatform" optionLabel="name" [showClear]="false"></p-dropdown>
-    </div>
+    <!--<div class="dropdowns">-->
+      <!--<p-dropdown [options]="regions" [(ngModel)]="chosenRegion" optionLabel="name" [showClear]="false"></p-dropdown>-->
+      <!--<p-dropdown [options]="platforms" [(ngModel)]="chosenPlatform" optionLabel="name" [showClear]="false"></p-dropdown>-->
+    <!--</div>-->
   </div>
 </div>
 <p-dialog [(visible)]="display" [contentStyle]="{'overflow':'visible'}" [style]="{'background-color': 'white'}" [contentStyle]="{'border':'none'}" [height]="100" [width]="250">
