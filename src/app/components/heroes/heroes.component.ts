@@ -15,11 +15,17 @@ export class HeroesComponent implements OnInit {
   public class: string;
   public state: string;
   public field: number;
+  public healers: any;
+  public tanks: any;
+  public dps: any;
 
   constructor(private api: ApiService, private store: StoreService, private router: Router) {
     this.heroes = null;
     this.state = 'in';
     this.field = 4;
+    this.healers = null;
+    this.tanks = null;
+    this.dps = null;
   }
 
   ngOnInit() {

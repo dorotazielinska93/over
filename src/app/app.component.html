@@ -5,7 +5,7 @@
   </div>
   <div class="buttons">
     <app-menu></app-menu>
-    <app-hero-selection *ngIf="showClasses"></app-hero-selection>
+    <app-hero-selection *ngIf="showClasses" (getDps)="setDps()" (getHealers)="setHealers()" (getTanks)="setTanks()"></app-hero-selection>
   </div>
 </div>
 <router-outlet (activate)="checkRoute()"></router-outlet>

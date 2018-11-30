@@ -1,5 +1,6 @@
 <div *ngIf="heroes !== null" class="heroes">
   <div *ngFor="let hero of heroes" class="{{getHeroClass(hero.id)}}" (click)="downloadHeroDetails(hero.id)" class="hero">
+    <div class="front"></div>
     <!--<div class="hero-text">{{hero.name}}</div>-->
   </div>
 </div>
