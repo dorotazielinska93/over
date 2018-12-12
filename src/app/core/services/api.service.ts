@@ -8,8 +8,8 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
-  public getUserInfo(platform, region, user): Observable<any> {
-    return this.http.get(`https://ow-api.com/v1/stats/${platform}/${region}/${user}/complete`);
+  public getUserInfoOne(user): Observable<any> {
+    return this.http.get(`https://ow-api.com/v1/stats/pc/eu/${user}/complete`);
   }
 
   public getHeroesInfo(): Observable<any> {
@@ -18,5 +18,9 @@ export class ApiService {
 
   public getHeroDetails(id): Observable<any> {
     return this.http.get(`https://overwatch-api.net/api/v1/hero/${id}`);
+  }
+
+  public getUserInfoTwo(user: any): Observable<any> {
+    return this.http.get(`http://overwatchy.com/stats/pc/eu/${user}`);
   }
 }

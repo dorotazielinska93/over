@@ -1,3 +1,5 @@
+@import "../../../styles/colors";
+
 .hero-section {
   margin: 20px;
   display: flex;
@@ -62,7 +64,7 @@
 
 .ana:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .bastion {
@@ -83,7 +85,7 @@
 
 .bastion:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .dva {
@@ -104,7 +106,7 @@
 
 .dva:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .orisa {
@@ -125,7 +127,7 @@
 
 .orisa:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .reinhardt {
@@ -146,7 +148,7 @@
 
 .reinhardt:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .roadhog {
@@ -167,7 +169,7 @@
 
 .roadhog:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .winston {
@@ -188,7 +190,7 @@
 
 .winston:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .zaria {
@@ -209,7 +211,7 @@
 
 .zaria:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .genji {
@@ -230,7 +232,7 @@
 
 .genji:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .hanzo {
@@ -252,7 +254,7 @@
 
 .hanzo:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .junkrat {
@@ -274,7 +276,7 @@
 
 .junkrat:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .lucio {
@@ -296,7 +298,7 @@
 
 .lucio:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .mccree {
@@ -318,7 +320,7 @@
 
 .mccree:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .mei {
@@ -340,7 +342,7 @@
 
 .mei:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .mercy {
@@ -362,7 +364,7 @@
 
 .mercy:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .phara {
@@ -383,7 +385,7 @@
 
 .phara:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .reaper {
@@ -404,7 +406,7 @@
 
 .reaper:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .soldier {
@@ -425,7 +427,7 @@
 
 .soldier:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .symmetra {
@@ -446,7 +448,7 @@
 
 .symmetra:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .torbjorn {
@@ -467,7 +469,7 @@
 
 .torbjorn:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .tracer {
@@ -488,7 +490,7 @@
 
 .tracer:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .widow {
@@ -509,7 +511,7 @@
 
 .widow:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .zenyatta {
@@ -530,7 +532,7 @@
 
 .zenyatta:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }
 
 .sombra {
@@ -551,5 +553,5 @@
 
 .sombra:hover {
   opacity: 1;
-  outline: 4px solid #F99E1A;
+  outline: 4px solid $orange;
 }

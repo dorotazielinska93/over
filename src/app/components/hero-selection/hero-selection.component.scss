@@ -1,8 +1,10 @@
+@import "../../../styles/colors";
+
 .hero-selection {
   height: 40px;
   display: flex;
   flex-direction: row;
-  background-color: #43484C;
+  background-color: $gray;
   padding: 5px;
   width: 300px;
   margin-right: 50px;

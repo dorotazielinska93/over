@@ -1,9 +1,26 @@
 <p-progressSpinner *ngIf="load && heroInfo === null"></p-progressSpinner>
-<div class="back-to-list">
-  <button [routerLink]="['/heroes']">Cofnij</button>
-</div>
-<div *ngIf="!load && heroInfo !== null">
-  <div>
-    {{heroInfo.name}}
+<!--<div class="back-to-list">-->
+  <!--<button [routerLink]="['/heroes']">Cofnij</button>-->
+<!--</div>-->
+<div *ngIf="!load && heroInfo !== null" class="{{getBackground()}}">
+  <div class="main-hero">
+    <div class="hero-info">
+      <div class="info">
+        <div class="options">
+          <div class="hero-main-info">
+            <div class="name">
+              {{heroInfo.name}}
+            </div>
+            <img src="../../../assets/heroes/healer.png" *ngIf="heroInfo.role.name === 'support'">
+            <img src="../../../assets/heroes/tank.png" *ngIf="heroInfo.role.name === 'tank'">
+            <img src="../../../assets/heroes/dps.png" *ngIf="heroInfo.role.name ==='offense' || heroInfo.role.name === 'defense'">
+          </div>
+          <div (click)="changeState()" class="skins"> Skins </div>
+        </div>
+      </div>
+    </div>
+    <div class="{{getHeroClass()}}">
+
+    </div>
   </div>
 </div>
