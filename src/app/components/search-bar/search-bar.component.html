@@ -2,7 +2,7 @@
   <div class="search-options">
     <div class="ui-inputgroup">
       <button pButton type="button" label="Search" (click)="searchUser()"></button>
-      <input type="text" pInputText placeholder="Keyword" [(ngModel)]="userName">
+      <input type="text" pInputText placeholder="Keyword" [(ngModel)]="userName" (keyup.enter)="searchUser()">
     </div>
     <!--<div class="dropdowns">-->
       <!--<p-dropdown [options]="regions" [(ngModel)]="chosenRegion" optionLabel="name" [showClear]="false"></p-dropdown>-->

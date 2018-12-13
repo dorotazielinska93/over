@@ -42,15 +42,18 @@ export class SearchBarComponent implements OnInit {
   public searchUser(): void {
     const user = this.userName.replace('#', '-');
 
-    this.api.getUserInfo(user).subscribe(response => {
+    this.api.getUserInfoOne(user).subscribe(response => {
       if (response.error) {
         this.error = response.error;
         this.display = true;
         return;
       }
+      this.store.setUserInfoTwo(response);
+    });
 
-      this.store.setuserInfo(response);
-      this.router.navigate(['/user-details']);
+    this.api.getUserInfoTwo(user).subscribe(data => {
+      this.store.setuserInfo(data);
+        this.router.navigate(['/user-details']);
     });
   }
 

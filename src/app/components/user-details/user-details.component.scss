@@ -1,0 +1,39 @@
+.main-user {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.left-menu {
+  width: 230px;
+  height: 100%;
+  border: 1px solid white;
+}
+
+.right {
+  height: 100%;
+  border: 1px solid red;
+}
+
+.main {
+  height: 100%;
+}
+
+.user-logo {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.portrait {
+  position: relative;
+  top: 35px;
+  left: 50px;
+  border-radius: 50%;
+}
+
+.lvl-icon {
+  position: absolute;
+  top: -32px;
+  left: -15px;
+}

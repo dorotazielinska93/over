@@ -6,11 +6,13 @@ export class StoreService {
   private userInfo: BehaviorSubject<any>;
   private heroDetails: BehaviorSubject<any>;
   private heroes: BehaviorSubject<any>;
+  private userInfoTwo: BehaviorSubject<any>;
 
   constructor() {
     this.userInfo = new BehaviorSubject<any>(null);
     this.heroDetails = new BehaviorSubject<any>(null);
     this.heroes = new BehaviorSubject<any>(null);
+    this.userInfoTwo = new BehaviorSubject<any>(null);
   }
 
   public getUserInfo(): Observable<any> {
@@ -19,6 +21,14 @@ export class StoreService {
 
   public getHeroes(): Observable<any> {
     return this.heroes.asObservable();
+  }
+
+  public getUserInfoTwo(): Observable<any> {
+    return this.userInfoTwo.asObservable();
+  }
+
+  public setUserInfoTwo(info): void {
+    this.userInfoTwo.next(info);
   }
 
   public setHeroes(heroes): void {

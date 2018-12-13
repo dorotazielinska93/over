@@ -17,6 +17,7 @@ import { ErrorDialogComponent } from './dialogs/error-dialog/error-dialog.compon
 import { DialogModule } from "primeng/dialog";
 import { HeroDetailsComponent } from './components/hero-details/hero-details.component';
 import { HeroSelectionComponent } from './components/hero-selection/hero-selection.component';
+import { ChartModule } from "primeng/chart";
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { HeroSelectionComponent } from './components/hero-selection/hero-selecti
     FormsModule,
     CoreModule,
     DialogModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
