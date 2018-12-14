@@ -2,25 +2,83 @@
 <!--<div class="back-to-list">-->
   <!--<button [routerLink]="['/heroes']">Cofnij</button>-->
 <!--</div>-->
-<div *ngIf="!load && heroInfo !== null" class="{{getBackground()}}">
-  <div class="main-hero">
-    <div class="hero-info">
-      <div class="info">
-        <div class="options">
-          <div class="hero-main-info">
-            <div class="name">
-              {{heroInfo.name}}
-            </div>
-            <img src="../../../assets/heroes/healer.png" *ngIf="heroInfo.role.name === 'support'">
-            <img src="../../../assets/heroes/tank.png" *ngIf="heroInfo.role.name === 'tank'">
-            <img src="../../../assets/heroes/dps.png" *ngIf="heroInfo.role.name ==='offense' || heroInfo.role.name === 'defense'">
-          </div>
-          <div (click)="changeState()" class="skins"> Skins </div>
-        </div>
+<!--<div *ngIf="!load && heroInfo !== null" >-->
+  <!--<div class="hero-map">-->
+
+  <!--</div>-->
+  <!--<div class="main-hero">-->
+    <!--<div class="hero-info">-->
+      <!--<div class="info">-->
+        <!--<div class="options">-->
+          <!--<div class="hero-main-info">-->
+            <!--<div class="name">-->
+              <!--{{heroInfo.name}}-->
+            <!--</div>-->
+            <!--<img src="../../../assets/heroes/healer.png" *ngIf="heroInfo.role.name === 'support'">-->
+            <!--<img src="../../../assets/heroes/tank.png" *ngIf="heroInfo.role.name === 'tank'">-->
+            <!--<img src="../../../assets/heroes/dps.png" *ngIf="heroInfo.role.name ==='offense' || heroInfo.role.name === 'defense'">-->
+          <!--</div>-->
+          <!--<div (click)="changeState()" class="skins"> Skins </div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="{{getHeroClass()}}">-->
+
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div class="hero-body">-->
+  <!--<div class="hero-background">-->
+    <!--<div class="hero-header">-->
+
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+<div class="{{getBackground()}}" *ngIf="heroInfo !== null">
+  <div class="one" >
+    <!--<div class="hero-name">{{heroInfo.name}}</div>-->
+  </div>
+  <div class="basic-info">
+    <div class="half">
+      <!--<img src="../../../assets/ana-logo.png">-->
+      <div class="basic-info-details">
+        <div>Real name: {{heroInfo.real_name}}</div>
+        <div>Affiliation: {{heroInfo.affiliation}}</div>
+        <div>Age: {{heroInfo.age}}</div>
+        <div>Base of operations: {{heroInfo.base_of_operations}}</div>
       </div>
     </div>
-    <div class="{{getHeroClass()}}">
-
+    <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 1">
+      <i class="fas fa-star"></i>
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+    </div>
+    <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 2">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="far fa-star"></i>
+    </div>
+    <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 3">
+      <i class="fas fa-star fa-3x"></i>
+      <i class="fas fa-star fa-3x"></i>
+      <i class="fas fa-star fa-3x"></i>
     </div>
   </div>
+  <div class="map">
+
+  </div>
+  <div class="three">
+
+  </div>
+  <div class="three">
+
+  </div>
+  <div class="three">
+
+  </div>
+  <div class="three">
+
+  </div>
 </div>
+

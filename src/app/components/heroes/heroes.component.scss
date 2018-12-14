@@ -22,6 +22,7 @@
 
 .heroes {
   margin-top: 10px;
+  //background-color: $gray;
 }
 
 .classes {
@@ -81,6 +82,10 @@
     width: 100%;
     height: 100%;
   }
+}
+
+.gray {
+  background-color: $gray;
 }
 
 .bastion:hover {
@@ -195,6 +200,7 @@
 
 .zaria {
   background-image: url("../../../assets/zaria-op.png");
+  background-color: $gray;
   height: 150px;
   background-repeat: no-repeat;
   margin-bottom: 10px;

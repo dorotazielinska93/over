@@ -101,36 +101,53 @@ export class HeroDetailsComponent implements OnInit {
   public getBackground(): string {
     switch (this.heroInfo.id) {
       case 1:
-      case 11:
-        return 'Anubis';
+        return 'ana-header';
       case 2:
-      case 20:
-        return 'Gibraltar';
+        return 'bastion-header';
       case 3:
-        return 'Pusan';
+        return 'dva-header';
       case 4:
-      case 22:
-        return 'Nepal';
+        return 'genji-header';
       case 5:
-        return 'Hanamura';
+        return 'hanzo-header';
       case 6:
-      case 14:
-        return 'Junkertown';
+        return 'junkrat-header';
       case 7:
-        return 'Lijang';
+        return 'lucio-header';
       case 8:
-        return 'Route';
+        return 'mccree-header';
       case 9:
-        return 'Ecopoint';
+        return 'mei-header';
+      case 10:
+        return 'mercy-header';
+      case 11:
+        return 'phara-header';
       case 12:
-        return 'Rialto';
+        return 'reaper-header';
       case 13:
-        return 'Eichenwalde';
+        return 'reinhardt-header';
+      case 14:
+        return 'roadhog-header';
+      case 15:
+        return 'soldier-header';
       case 16:
-        return 'Oasis';
+        return 'symmetra-header';
+      case 17:
+        return 'torbjorn-header';
       case 18:
+        return 'tracer-header';
       case 19:
-        return 'Kings';
+        return 'widow-header';
+      case 20:
+        return 'winston-header';
+      case 21:
+        return 'zaria-header';
+      case 22:
+        return 'zenyatta-header';
+      case 23:
+        return 'sombra-header';
+      case 24:
+        return 'orisa-header';
     }
   }
 

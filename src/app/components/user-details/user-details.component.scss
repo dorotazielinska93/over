@@ -1,17 +1,17 @@
+@import "../../../styles/colors";
+
 .main-user {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100%;
 }
 
 .left-menu {
-  width: 230px;
-  height: 100%;
-  border: 1px solid white;
+  height: 100px;
+  background-color: rgba(249, 158, 26, 0.7);
 }
 
 .right {
-  height: 100%;
   border: 1px solid red;
 }
 

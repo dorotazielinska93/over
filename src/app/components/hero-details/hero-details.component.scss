@@ -1,284 +1,88 @@
 @import "../../../styles/colors";
 
-.back-to-list {
-  height: 50px;
-  background-color: $orange;
+div {
+
 }
 
-:host {
-  height: 100%;
+.ana-header {
+  .one {
+    height: 150px;
+    background-image: url("../../../assets/ana-moze.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    //-webkit-box-shadow: 0px 9px 40px -2px rgba(0,0,0,0.75);
+    //-moz-box-shadow: 0px 9px 40px -2px rgba(0,0,0,0.75);
+    //box-shadow: 0px 9px 40px -2px rgba(0,0,0,0.75);
+  }
+
+  .basic-info {
+    -moz-box-shadow: 10px 10px 10px -10px black, 10px -10px 10px -10px grey;
+    -webkit-box-shadow: 10px 10px 10px -10px black, 10px -10px 10px -10px grey;
+    box-shadow: 10px 10px 10px -10px black, 10px -10px 10px -10px black;
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    padding: 20px 60px;
+    .half {
+      width: 80%;
+
+      img {
+        height: 100%;
+        width: 100px;
+        margin-right: 80px;
+      }
+
+      display: flex;
+      flex-direction: row;
+
+      .basic-info-details {
+        line-height: 1.8;
+      }
+    }
+
+    .basic-info-difficulty {
+      width: 20%;
+      text-align: right;
+
+      .fas {
+        line-height: 2 !important;
+        margin-right: 10px;
+        color: $orange;
+      }
+
+      .fa-star:hover {
+        outline: 2px solid red;
+      }
+    }
+  }
+
+  .map {
+    -moz-box-shadow:    inset  0  10px 10px -10px black,
+    inset  0 -10px 10px -10px grey;
+    -webkit-box-shadow: inset  0  10px 10px -10px black,
+    inset  0 -10px 10px -10px grey;
+    box-shadow:        inset  0  10px 10px -10px black,
+    inset  0 -10px 10px -10px black;
+    background-image: url("../../../assets/ana-bot.jpg");
+    background-position: bottom;
+    height: 150px;
+  }
+
+  .three {
+    height: 150px;
+    background-color: white;
+    margin-top: 10px;
+  }
+
+  .four {
+    height: 150px;
+  }
+
+  .hero-name {
+    font-size: 80px;
+    color: $Ana;
+    text-align: center;
+  }
 }
 
-button {
-  height: 50px;
-  background-color: #405175;
-  color: white;
-}
 
-.Anubis {
-  height: 600px;
-  background-image: url("../../../assets/anubis-op.png");
-  background-size: 100%;
-}
-
-.Gibraltar {
-  height: 600px;
-  background-image: url("../../../assets/gibraltar-op.png");
-  background-size: 100%;
-}
-
-.Pusan {
-  height: 600px;
-  background-image: url("../../../assets/Busan-op.png");
-  background-size: 100%;
-}
-
-.Nepal {
-  height: 600px;
-  background-image: url("../../../assets/Nepal-op.png");
-  background-size: 100%;
-}
-
-.Hanamura {
-  height: 600px;
-  background-image: url("../../../assets/hanamura-op.png");
-  background-size: 100%;
-}
-
-.Junkertown {
-  height: 600px;
-  background-image: url("../../../assets/junkertown-op.png");
-  background-size: 100%;
-}
-
-.Lijang {
-  height: 600px;
-  background-image: url("../../../assets/Towerop.png");
-  background-size: 100%;
-}
-
-.Route {
-  height: 600px;
-  background-image: url("../../../assets/route-op.png");
-  background-size: 100%;
-}
-
-.Ecopoint {
-  height: 600px;
-  background-image: url("../../../assets/ecopoint-op.png");
-  background-size: 100%;
-}
-
-.Rialto {
-  height: 600px;
-  background-image: url("../../../assets/rialto-op.png");
-  background-size: 100%;
-}
-
-.Eichenwalde {
-  height: 600px;
-  background-image: url("../../../assets/eichen-op.png");
-  background-size: 100%;
-}
-
-.Oasis {
-  height: 600px;
-  background-image: url("../../../assets/oasis-op.png");
-  background-size: 100%;
-}
-
-.Kings {
-  height: 600px;
-  background-image: url("../../../assets/kingsrow-op.png");
-  background-size: 100%;
-}
-
-img {
-  height: 70px;
-  width: 70px;
-  transform: skewX(6deg); /* Standard syntax */
-}
-
-.name {
-  width: 100%;
-}
-
-.hero-main-info {
-  display: flex;
-  flex-direction: row;
-  background-color: rgba(153, 165, 205, 0.7);
-}
-
-.hero-main-info:hover {
-  background-color: rgba(153, 165, 205, 1);
-}
-
-.skins {
-  //height: 30px;
-  background-color: white;
-  color: $orange;
-  margin: 10px auto 10px;
-  //width: 90%;
-  -ms-transform: skewX(15deg); /* IE 9 */
-  -webkit-transform: skewX(15deg); /* Safari */
-  transform: skewX(15deg); /* Standard syntax */
-  padding: 10px;
-}
-
-.options {
-  width: 100%;
-}
-
-.options-small {
-  width: 30%;
-}
-
-.info {
-  width: 90%;
-  height: 90%;
-  margin: 30px 20px;
-  background-color: rgba(67, 72, 76, 0.7);
-  padding: 20px;
-  //-ms-transform: skewX(-6deg); /* IE 9 */
-  //-webkit-transform: skewX(-6deg); /* Safari */
-  //transform: skewX(-6deg); /* Standard syntax */
-}
-
-.info-wide {
-  width: 100%;
-  height: 90%;
-  //margin: 30px auto;
-  background-color: rgba(67, 72, 76, 0.7);
-  padding: 20px;
-  -ms-transform: skewX(0deg); /* IE 9 */
-  -webkit-transform: skewX(0deg); /* Safari */
-  transform: skewX(0deg); /* Standard syntax */
-}
-
-.main-hero {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-}
-
-.hero-info {
-  width: 50%;
-  height: 100%;
-}
-
-.hero-info-wide {
-  width: 100%;
-  height: 100%;
-}
-
-.ana {
-  background-image: url("../../../assets/Ana_portrait2.png");
-  width: 50%;
-  height: 100%;
-}
-
-.bastion {
-  background-image: url("../../../assets/Bast.png");
-  width: 50%;
-  height: 100%;
-}
-
-.dva {
-  background-image: url("../../../assets/D.Va.png");
-  width: 50%;
-  height: 100%;
-}
-
-.genji {
-  background-image: url("../../../assets/gengu.png");
-  width: 50%;
-  height: 100%;
-}
-
-.hanzo {
-  background-image: url("../../../assets/Henzu.png");
-  width: 50%;
-  height: 100%;
-}
-
-.junkrat {
-  background-image: url("../../../assets/Junkrat.png");
-  width: 50%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-
-.lucio {
-  background-image: url("../../../assets/Lucek.png");
-  background-position: top;
-  background-repeat: no-repeat;
-  width: 50%;
-  height: 100%;
-}
-
-.mccree {
-  background-image: url("../../../assets/ree.png");
-  width: 50%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-
-.mei {
-  background-image: url("../../../assets/MeiPNG.png");
-  width: 50%;
-  height: 100%;
-}
-
-.phara {
-  background-image: url("../../../assets/Pharahhh.png");
-  width: 50%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-
-.reaper {
-  background-image: url("../../../assets/Reap.png");
-  width: 50%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-
-.reinhardt {
-  background-image: url("../../../assets/Reinha.png");
-  width: 50%;
-  height: 100%;
-}
-
-.symmetra {
-  background-image: url("../../../assets/Symi.png");
-  width: 50%;
-  height: 100%;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-
-.tracer {
-  background-image: url("../../../assets/Tracy.png");
-  width: 50%;
-  height: 100%;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-
-.widow {
-  background-image: url("../../../assets/widowpng.png");
-  width: 50%;
-  height: 100%;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-
-.winston {
-  background-image: url("../../../assets/winsty.png");
-  width: 50%;
-  height: 100%;
-}
