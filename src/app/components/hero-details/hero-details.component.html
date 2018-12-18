@@ -1,98 +1,182 @@
 <p-progressSpinner *ngIf="load && heroInfo === null"></p-progressSpinner>
-<div class="video-container" *ngIf="heroInfo !== null">
-  <video autoplay width="100%" loop>
-    <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/intro-video.webm">
-  </video>
-  <div class="overlay-desc">
-    <div class="basic-info">
-      <div class="hero-top">
-        <div class="half">
-          <div class="basic-info-details">
-            <div>Real name: {{heroInfo.real_name}}</div>
-            <div>Affiliation: {{heroInfo.affiliation}}</div>
-            <div>Age: {{heroInfo.age}}</div>
-            <div>Base of operations: {{heroInfo.base_of_operations}}</div>
+<div *ngIf="heroInfo !== null">
+  <div class="video-container">
+    <video autoplay width="100%" loop *ngIf="heroInfo.name === 'Ana'">
+      <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/intro-video.webm">
+    </video>
+    <video autoplay width="100%" loop *ngIf="heroInfo.name === 'Bastion'">
+      <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/intro-video.webm">
+    </video>
+    <div class="overlay-desc">
+      <div class="basic-info">
+        <div class="hero-top">
+          <div class="half">
+            <div class="basic-info-details">
+              <div *ngIf="heroInfo.real_name !== null">Real name: {{heroInfo.real_name}}</div>
+              <div *ngIf="heroInfo.affiliation !== null">Affiliation: {{heroInfo.affiliation}}</div>
+              <div *ngIf="heroInfo.age !== null">Age: {{heroInfo.age}}</div>
+              <div *ngIf="heroInfo.base_of_operations !== null">Base of operations: {{heroInfo.base_of_operations}}</div>
+            </div>
+          </div>
+          <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 1">
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 2">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 3">
+            <i class="fas fa-star fa-3x"></i>
+            <i class="fas fa-star fa-3x"></i>
+            <i class="fas fa-star fa-3x"></i>
           </div>
         </div>
-        <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 1">
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-        </div>
-        <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 2">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-        </div>
-        <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 3">
-          <i class="fas fa-star fa-3x"></i>
-          <i class="fas fa-star fa-3x"></i>
-          <i class="fas fa-star fa-3x"></i>
+        <div class="hero-bottom">
+          <button pButton type="button" label="Story" class="ui-button-raised ui-button-secondary"
+                  (click)="goToElement(story)"></button>
+          <button pButton type="button" label="Abilities" class="ui-button-raised ui-button-secondary" (click)="goToElement(abilities)"></button>
+          <button pButton type="button" label="Heroes" class="ui-button-raised ui-button-secondary"></button>
+          <button pButton type="button" label="Heroes" class="ui-button-raised ui-button-secondary"></button>
         </div>
       </div>
-      <div class="hero-bottom">
-        <button pButton type="button" label="Story" class="ui-button-raised ui-button-secondary"
-                (click)="goToElement(story)"></button>
-        <button pButton type="button" label="Abilities" class="ui-button-raised ui-button-secondary" (click)="goToElement(abilities)"></button>
-        <button pButton type="button" label="Heroes" class="ui-button-raised ui-button-secondary"></button>
-        <button pButton type="button" label="Heroes" class="ui-button-raised ui-button-secondary"></button>
+    </div>
+  </div>
+  <div class="story" #story *ngIf="heroInfo.name === 'Ana'">
+    <div class="story-body">
+      <div class="top">
+        <div class="motto">
+          "EVERYONE MUST FIND THEIR CAUSE."
+        </div>
+      </div>
+      <div class="bottom">
+        One of the founding members of Overwatch, Ana uses her skills and expertise to defend her home and the people she
+        cares for.<br><br>
+
+        As the Omnic Crisis inflicted a heavy toll on Egypt, the country's depleted and undermanned security forces relied
+        on elite snipers for support. Among them was Ana Amari, who was widely considered to be the world's best. Her
+        superior marksmanship, decision-making, and instincts made her a natural selection to join the Overwatch strike
+        team that would end the war.<br><br>
+
+        Following the success of Overwatch's original mission, Ana served for many years as Strike Commander Morrison's
+        second-in-command. Despite her responsibilities in leading the organization, Ana refused to step away from combat
+        operations. She remained on active duty well into her fifties, until she was believed to have been killed during a
+        hostage rescue mission by the Talon operative known as Widowmaker.<br><br>
+
+        In truth, Ana survived that encounter, despite being gravely wounded and losing her right eye. During her
+        recovery, she wrestled with the weight of a life spent in combat, and she chose to stay out of the world's growing
+        conflicts. However, as time passed, she realized she could not sit on the sidelines while people threatened her
+        city and the innocents around her.<br><br>
+
+        Now, Ana has rejoined the fight to protect her country from the forces that would destabilize it, and most
+        importantly, to keep her family and her closest allies safe.
+      </div>
+    </div>
+  </div>
+  <div class="story-bast" #story *ngIf="heroInfo.name === 'Bastion'">
+    <div class="story-body">
+      <div class="top">
+        <div class="motto">
+          "EVERYONE MUST FIND THEIR CAUSE."
+        </div>
+      </div>
+      <div class="bottom">
+        Once a frontline combatant in the devastating Omnic Crisis, this curious Bastion unit now explores the world, fascinated by nature but wary of a fearful humanity.<br><br>
+
+        Originally created for peacekeeping purposes, Bastion robot units possessed the unique ability to rapidly reconfigure themselves into an assault-cannon mode. But during the Omnic Crisis, they were turned against their human makers, forming the bulk of the omnics' rebel army. Following the resolution of the crisis, nearly all of them were destroyed or disassembled. To this day, Bastion units still symbolize the horrors of the conflict.<br><br>
+
+        One unique Bastion unit, severely damaged in the final battles of the war, was left forgotten for over a decade. It lay dormant, exposed to the elements and rusting while nature slowly reclaimed it. Overgrown with vines and roots and nested upon by small animals, the robot sat inert, seemingly unaware of the passing of time. That was until one fateful day, when it unexpectedly reactivated. With its combat programming all but lost, it instead displayed an intense curiosity about the natural world and its inhabitants. This inquisitive Bastion unit set out to explore its surroundings and discover its purpose on a war-ravaged planet.<br><br>
+
+        Though "Bastion" appears to be gentle—even harmless, at times—its core combat programming takes over when the unit senses danger, utilizing its entire arsenal to eliminate anything it perceives as a threat. This has led to instances of conflict with the few humans it has encountered, and has driven it to avoid populated areas in favor of the wild, uncharted regions of the world.<br><br>
+      </div>
+    </div>
+  </div>
+  <div class="abilities" #abilities *ngIf="heroInfo.name === 'Ana'">
+    <video autoplay width="100%" loop *ngIf="ability === 1">
+      <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-biotic-rifle/video-ability.webm">
+    </video>
+    <video autoplay width="100%" loop *ngIf="ability === 2">
+      <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-sleep-dart/video-ability.webm">
+    </video>
+    <video autoplay width="100%" loop *ngIf="ability === 3">
+      <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-biotic-grenade/video-ability.webm">
+    </video>
+    <video autoplay width="100%" loop *ngIf="ability === 4">
+      <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-stim-boost/video-ability.webm">
+    </video>
+    <div class="abilities-menu">
+      <div class="abilities-header">
+        Abilities
+      </div>
+      <div class="buttons">
+        <!--<button (click)="changeAbility(1)" pButton type="button" class="ui-button-raised ui-button-secondary"><img src="../../../assets/ana-ability-1.png" class="icon-image-first"></button>-->
+        <button (click)="changeAbility(2)" pButton type="button" class="ui-button-raised ui-button-secondary"><img src="../../../assets/ana-ability-2.png" class="icon-image"></button>
+        <button (click)="changeAbility(3)" pButton type="button" class="ui-button-raised ui-button-secondary"><img src="../../../assets/ana-ability-3.png" class="icon-image"></button>
+        <button (click)="changeAbility(4)" pButton type="button" class="ui-button-raised ui-button-secondary"><img src="../../../assets/ana-ability-4.png" class="icon-image"></button>
+      </div>
+    </div>
+    <div class="ability-info-three">
+      <div *ngIf="ability === 2" class="desc">
+        <div class="ability-name"> SLEEP DART</div>
+        <div class="ability-desc">Ana fires a dart from her sidearm, rendering an enemy unconscious (though any damage will rouse them).</div>
+      </div>
+      <div *ngIf="ability === 3" class="desc">
+        <div class="ability-name">BIOTIC GRENADE</div>
+        <div class="ability-desc">Ana tosses a biotic bomb that deals damage to enemies and heals allies in a small area of effect. Affected allies briefly receive increased healing from all sources, while enemies caught in the blast cannot be healed for a few moments.
+        </div>
+      </div>
+      <div *ngIf="ability === 4" class="desc">
+        <div class="ability-name">NANO BOOST</div>
+        <div class="ability-desc">After Ana hits one of her allies with a combat boost, they deal more damage, and take less damage from enemies’ attacks.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="abilities" #abilities *ngIf="heroInfo.name === 'Bastion'">
+    <video autoplay width="100%" loop *ngIf="ability === 1">
+      <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-biotic-rifle/video-ability.webm">
+    </video>
+    <video autoplay width="100%" loop *ngIf="ability === 2">
+      <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-sleep-dart/video-ability.webm">
+    </video>
+    <video autoplay width="100%" loop *ngIf="ability === 3">
+      <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-biotic-grenade/video-ability.webm">
+    </video>
+    <video autoplay width="100%" loop *ngIf="ability === 4">
+      <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-stim-boost/video-ability.webm">
+    </video>
+    <div class="abilities-menu">
+      <div class="abilities-header">
+        Abilities
+      </div>
+      <div class="buttons">
+        <!--<button (click)="changeAbility(1)" pButton type="button" class="ui-button-raised ui-button-secondary"><img src="../../../assets/ana-ability-1.png" class="icon-image-first"></button>-->
+        <button (click)="changeAbility(2)" pButton type="button" class="ui-button-raised ui-button-secondary"><img src="../../../assets/ana-ability-2.png" class="icon-image"></button>
+        <button (click)="changeAbility(3)" pButton type="button" class="ui-button-raised ui-button-secondary"><img src="../../../assets/ana-ability-3.png" class="icon-image"></button>
+        <button (click)="changeAbility(4)" pButton type="button" class="ui-button-raised ui-button-secondary"><img src="../../../assets/ana-ability-4.png" class="icon-image"></button>
+      </div>
+    </div>
+    <div class="ability-info-three">
+      <div *ngIf="ability === 2" class="desc">
+        <div class="ability-name"> SLEEP DART</div>
+        <div class="ability-desc">Ana fires a dart from her sidearm, rendering an enemy unconscious (though any damage will rouse them).</div>
+      </div>
+      <div *ngIf="ability === 3" class="desc">
+        <div class="ability-name">BIOTIC GRENADE</div>
+        <div class="ability-desc">Ana tosses a biotic bomb that deals damage to enemies and heals allies in a small area of effect. Affected allies briefly receive increased healing from all sources, while enemies caught in the blast cannot be healed for a few moments.
+        </div>
+      </div>
+      <div *ngIf="ability === 4" class="desc">
+        <div class="ability-name">NANO BOOST</div>
+        <div class="ability-desc">After Ana hits one of her allies with a combat boost, they deal more damage, and take less damage from enemies’ attacks.
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div class="story" #story>
-  <div class="story-body">
-    <div class="top">
-      <div class="motto">
-        "EVERYONE MUST FIND THEIR CAUSE."
-      </div>
-    </div>
-    <div class="bottom">
-      One of the founding members of Overwatch, Ana uses her skills and expertise to defend her home and the people she
-      cares for.<br><br>
 
-      As the Omnic Crisis inflicted a heavy toll on Egypt, the country's depleted and undermanned security forces relied
-      on elite snipers for support. Among them was Ana Amari, who was widely considered to be the world's best. Her
-      superior marksmanship, decision-making, and instincts made her a natural selection to join the Overwatch strike
-      team that would end the war.<br><br>
-
-      Following the success of Overwatch's original mission, Ana served for many years as Strike Commander Morrison's
-      second-in-command. Despite her responsibilities in leading the organization, Ana refused to step away from combat
-      operations. She remained on active duty well into her fifties, until she was believed to have been killed during a
-      hostage rescue mission by the Talon operative known as Widowmaker.<br><br>
-
-      In truth, Ana survived that encounter, despite being gravely wounded and losing her right eye. During her
-      recovery, she wrestled with the weight of a life spent in combat, and she chose to stay out of the world's growing
-      conflicts. However, as time passed, she realized she could not sit on the sidelines while people threatened her
-      city and the innocents around her.<br><br>
-
-      Now, Ana has rejoined the fight to protect her country from the forces that would destabilize it, and most
-      importantly, to keep her family and her closest allies safe.
-    </div>
-  </div>
-</div>
-<div class="abilities" #abilities>
-  <div class="abilities-menu">
-    <div class="buttons">
-      <button (click)="changeAbility(1)">1</button>
-      <button (click)="changeAbility(2)">2</button>
-      <button (click)="changeAbility(3)">3</button>
-      <button (click)="changeAbility(4)">4</button>
-    </div>
-  </div>
-<video autoplay width="100%" loop *ngIf="ability === 1">
-  <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-biotic-rifle/video-ability.webm">
-</video>
-  <video autoplay width="100%" loop *ngIf="ability === 2">
-    <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-sleep-dart/video-ability.webm">
-  </video>
-  <video autoplay width="100%" loop *ngIf="ability === 3">
-    <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-biotic-grenade/video-ability.webm">
-  </video>
-  <video autoplay width="100%" loop *ngIf="ability === 4">
-    <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-stim-boost/video-ability.webm">
-  </video>
-</div>
 
 
 <!--<div class="{{getBackground()}}" *ngIf="heroInfo !== null">-->

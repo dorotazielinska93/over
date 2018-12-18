@@ -86,16 +86,17 @@ video {
   }
 }
 
-.story {
-  background-image: url('../../../assets/ana-story-of.jpg');
-  height: 900px;
+.story-bast {
+  background-image: url('https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/background-story.jpg');
+  height: 700px;
   background-color: $Ana;
   padding: 25px 100px;
   background-position: top;
+  background-size: 100%;
   color: white;
 
   .story-body {
-    width: 50%;
+    width: 60%;
     height: 100%;
     background-color: rgba(84, 89, 112, 0.7);
     padding: 25px;
@@ -114,32 +115,131 @@ video {
       background-color: rgba(84, 89, 112, 0.8);
       padding: 20px;
       height: 80%;
+      overflow: scroll;
+    }
+  }
+}
+
+.story {
+  background-image: url('../../../assets/ana-story-of.jpg');
+  height: 700px;
+  background-color: $Ana;
+  padding: 25px 100px;
+  background-position: top;
+  background-size: 100%;
+  color: white;
+
+  .story-body {
+    width: 60%;
+    height: 100%;
+    background-color: rgba(84, 89, 112, 0.7);
+    padding: 25px;
+
+    .top {
+      height: 20%;
+
+      .motto {
+        color: #036BC9;
+        font-size: 20px;
+        font-weight: bolder;
+      }
+    }
+
+    .bottom {
+      background-color: rgba(84, 89, 112, 0.8);
+      padding: 20px;
+      height: 80%;
+      overflow: scroll;
     }
   }
 }
 
 .abilities {
-  height: 900px;
   background-color: #F99E1A;
+  position: relative;
 
   .abilities-menu {
     position: absolute;
-    height: 100px;
-    width: 100%;
+    top: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    height: 150px;
+    width: 100%;
+    padding-top: 10px;
+    background-color: rgba(84, 89, 112, 0);
+    text-align: center;
+
+    .abilities-header {
+      width: 100%;
+      margin-bottom: 20px;
+    }
 
     .buttons {
-      width: 50%;
+      width: 100%;
       margin: 0 auto;
 
       button {
-        border-radius: 50%;
-        height: 80%;
         width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 50px;
+        background-color: rgba(84, 89, 112, 0.5) !important;
+        border: 1px solid white !important;
+        //box-shadow: none !important;
+
+        .icon-image {
+          height: 70px;
+        }
+
+        .icon-image-first {
+          height: 54px;
+          width: 120px;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      button:hover {
+        background-color: rgba(84, 89, 112, 1) !important;
+      }
+
+      button:focus {
+        background-color: rgba(84, 89, 112, 1) !important;
+        outline: none;
+        box-shadow: none;
       }
     }
+  }
 
+  .ability-info-three {
+    padding: 20px;
+    position: absolute;
+    right: 50px;
+    top: 100px;
+    background-color: rgba(84, 89, 112, 0.5);
+    height: 400px;
+    width: 300px;
+    color: white;
+
+    .desc {
+      height: 100%;
+      position: relative;
+
+      .ability-name {
+        height: 20%;
+      }
+
+      .ability-desc {
+        bottom: 0;
+        position: absolute;
+      }
+    }
   }
 }
 

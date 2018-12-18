@@ -39,6 +39,7 @@ export class HeroDetailsComponent implements OnInit {
   }
 
   public changeAbility(number): void {
+    console.log(number);
     this.ability = number;
   }
 
