@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from "../../core/services/api.service";
 import { StoreService } from "../../core/services/store.service";
 import {Router} from '@angular/router';
@@ -17,6 +17,7 @@ export class HeroDetailsComponent implements OnInit {
   public id: number;
   public showSkins: boolean;
   public state: string;
+  public ability: number;
 
   constructor(private api: ApiService, private store: StoreService, private router: Router) {
     this.load = true;
@@ -24,6 +25,7 @@ export class HeroDetailsComponent implements OnInit {
     this.id = this.store.getHeroDetailsSnapshot();
     this.showSkins = false;
     this.state = 'in';
+    this.ability = 1;
   }
 
   ngOnInit() {
@@ -36,9 +38,17 @@ export class HeroDetailsComponent implements OnInit {
     });
   }
 
+  public changeAbility(number): void {
+    this.ability = number;
+  }
+
   public changeState(): void {
     this.state = this.state === 'out' ? 'in' : 'out';
     this.showSkins = !this.showSkins;
+  }
+
+  public goToElement(el): void {
+    el.scrollIntoView();
   }
 
   public showSkinsAction(): void {

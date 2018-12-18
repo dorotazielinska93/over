@@ -1,84 +1,152 @@
 <p-progressSpinner *ngIf="load && heroInfo === null"></p-progressSpinner>
-<!--<div class="back-to-list">-->
-  <!--<button [routerLink]="['/heroes']">Cofnij</button>-->
-<!--</div>-->
-<!--<div *ngIf="!load && heroInfo !== null" >-->
-  <!--<div class="hero-map">-->
-
-  <!--</div>-->
-  <!--<div class="main-hero">-->
-    <!--<div class="hero-info">-->
-      <!--<div class="info">-->
-        <!--<div class="options">-->
-          <!--<div class="hero-main-info">-->
-            <!--<div class="name">-->
-              <!--{{heroInfo.name}}-->
-            <!--</div>-->
-            <!--<img src="../../../assets/heroes/healer.png" *ngIf="heroInfo.role.name === 'support'">-->
-            <!--<img src="../../../assets/heroes/tank.png" *ngIf="heroInfo.role.name === 'tank'">-->
-            <!--<img src="../../../assets/heroes/dps.png" *ngIf="heroInfo.role.name ==='offense' || heroInfo.role.name === 'defense'">-->
-          <!--</div>-->
-          <!--<div (click)="changeState()" class="skins"> Skins </div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="{{getHeroClass()}}">-->
-
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
-
-<!--<div class="hero-body">-->
-  <!--<div class="hero-background">-->
-    <!--<div class="hero-header">-->
-
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
-<div class="{{getBackground()}}" *ngIf="heroInfo !== null">
-  <div class="one" >
-    <!--<div class="hero-name">{{heroInfo.name}}</div>-->
-  </div>
-  <div class="basic-info">
-    <div class="half">
-      <!--<img src="../../../assets/ana-logo.png">-->
-      <div class="basic-info-details">
-        <div>Real name: {{heroInfo.real_name}}</div>
-        <div>Affiliation: {{heroInfo.affiliation}}</div>
-        <div>Age: {{heroInfo.age}}</div>
-        <div>Base of operations: {{heroInfo.base_of_operations}}</div>
+<div class="video-container" *ngIf="heroInfo !== null">
+  <video autoplay width="100%" loop>
+    <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/intro-video.webm">
+  </video>
+  <div class="overlay-desc">
+    <div class="basic-info">
+      <div class="hero-top">
+        <div class="half">
+          <div class="basic-info-details">
+            <div>Real name: {{heroInfo.real_name}}</div>
+            <div>Affiliation: {{heroInfo.affiliation}}</div>
+            <div>Age: {{heroInfo.age}}</div>
+            <div>Base of operations: {{heroInfo.base_of_operations}}</div>
+          </div>
+        </div>
+        <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 1">
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 2">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 3">
+          <i class="fas fa-star fa-3x"></i>
+          <i class="fas fa-star fa-3x"></i>
+          <i class="fas fa-star fa-3x"></i>
+        </div>
+      </div>
+      <div class="hero-bottom">
+        <button pButton type="button" label="Story" class="ui-button-raised ui-button-secondary"
+                (click)="goToElement(story)"></button>
+        <button pButton type="button" label="Abilities" class="ui-button-raised ui-button-secondary" (click)="goToElement(abilities)"></button>
+        <button pButton type="button" label="Heroes" class="ui-button-raised ui-button-secondary"></button>
+        <button pButton type="button" label="Heroes" class="ui-button-raised ui-button-secondary"></button>
       </div>
     </div>
-    <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 1">
-      <i class="fas fa-star"></i>
-      <i class="far fa-star"></i>
-      <i class="far fa-star"></i>
-    </div>
-    <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 2">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="far fa-star"></i>
-    </div>
-    <div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 3">
-      <i class="fas fa-star fa-3x"></i>
-      <i class="fas fa-star fa-3x"></i>
-      <i class="fas fa-star fa-3x"></i>
-    </div>
-  </div>
-  <div class="map">
-
-  </div>
-  <div class="three">
-
-  </div>
-  <div class="three">
-
-  </div>
-  <div class="three">
-
-  </div>
-  <div class="three">
-
   </div>
 </div>
+<div class="story" #story>
+  <div class="story-body">
+    <div class="top">
+      <div class="motto">
+        "EVERYONE MUST FIND THEIR CAUSE."
+      </div>
+    </div>
+    <div class="bottom">
+      One of the founding members of Overwatch, Ana uses her skills and expertise to defend her home and the people she
+      cares for.<br><br>
+
+      As the Omnic Crisis inflicted a heavy toll on Egypt, the country's depleted and undermanned security forces relied
+      on elite snipers for support. Among them was Ana Amari, who was widely considered to be the world's best. Her
+      superior marksmanship, decision-making, and instincts made her a natural selection to join the Overwatch strike
+      team that would end the war.<br><br>
+
+      Following the success of Overwatch's original mission, Ana served for many years as Strike Commander Morrison's
+      second-in-command. Despite her responsibilities in leading the organization, Ana refused to step away from combat
+      operations. She remained on active duty well into her fifties, until she was believed to have been killed during a
+      hostage rescue mission by the Talon operative known as Widowmaker.<br><br>
+
+      In truth, Ana survived that encounter, despite being gravely wounded and losing her right eye. During her
+      recovery, she wrestled with the weight of a life spent in combat, and she chose to stay out of the world's growing
+      conflicts. However, as time passed, she realized she could not sit on the sidelines while people threatened her
+      city and the innocents around her.<br><br>
+
+      Now, Ana has rejoined the fight to protect her country from the forces that would destabilize it, and most
+      importantly, to keep her family and her closest allies safe.
+    </div>
+  </div>
+</div>
+<div class="abilities" #abilities>
+  <div class="abilities-menu">
+    <div class="buttons">
+      <button (click)="changeAbility(1)">1</button>
+      <button (click)="changeAbility(2)">2</button>
+      <button (click)="changeAbility(3)">3</button>
+      <button (click)="changeAbility(4)">4</button>
+    </div>
+  </div>
+<video autoplay width="100%" loop *ngIf="ability === 1">
+  <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-biotic-rifle/video-ability.webm">
+</video>
+  <video autoplay width="100%" loop *ngIf="ability === 2">
+    <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-sleep-dart/video-ability.webm">
+  </video>
+  <video autoplay width="100%" loop *ngIf="ability === 3">
+    <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-biotic-grenade/video-ability.webm">
+  </video>
+  <video autoplay width="100%" loop *ngIf="ability === 4">
+    <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/ability-stim-boost/video-ability.webm">
+  </video>
+</div>
+
+
+<!--<div class="{{getBackground()}}" *ngIf="heroInfo !== null">-->
+<!--<div class="one" >-->
+<!--</div>-->
+<!--<div class="basic-info">-->
+<!--<div class="hero-top">-->
+<!--<div class="half">-->
+<!--<div class="basic-info-details">-->
+<!--<div>Real name: {{heroInfo.real_name}}</div>-->
+<!--<div>Affiliation: {{heroInfo.affiliation}}</div>-->
+<!--<div>Age: {{heroInfo.age}}</div>-->
+<!--<div>Base of operations: {{heroInfo.base_of_operations}}</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 1">-->
+<!--<i class="fas fa-star"></i>-->
+<!--<i class="far fa-star"></i>-->
+<!--<i class="far fa-star"></i>-->
+<!--</div>-->
+<!--<div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 2">-->
+<!--<i class="fas fa-star"></i>-->
+<!--<i class="fas fa-star"></i>-->
+<!--<i class="far fa-star"></i>-->
+<!--</div>-->
+<!--<div class="basic-info-difficulty" *ngIf="heroInfo.difficulty === 3">-->
+<!--<i class="fas fa-star fa-3x" ></i>-->
+<!--<i class="fas fa-star fa-3x"></i>-->
+<!--<i class="fas fa-star fa-3x"></i>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="hero-bottom">-->
+<!--<button pButton type="button" label="Abilities" class="ui-button-raised ui-button-secondary" (click)="goToElement(here)"></button>-->
+<!--<button pButton type="button" label="Heroes" class="ui-button-raised ui-button-secondary"></button>-->
+<!--<button pButton type="button" label="Heroes" class="ui-button-raised ui-button-secondary"></button>-->
+<!--<button pButton type="button" label="Heroes" class="ui-button-raised ui-button-secondary"></button>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="map">-->
+
+<!--</div>-->
+<!--<div class="three">-->
+<!--<video autoplay width="100%" height="100%">-->
+<!--<source src="https://d1u1mce87gyfbn.cloudfront.net/hero/ana/intro-video.webm">-->
+<!--</video>-->
+<!--</div>-->
+<!--<div class="three">-->
+
+<!--</div>-->
+<!--<div class="three" #here>-->
+
+<!--</div>-->
+<!--<div class="three">-->
+
+<!--</div>-->
+<!--</div>-->
 
